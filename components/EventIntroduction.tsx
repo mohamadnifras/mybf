@@ -13,7 +13,7 @@ export function EventIntroduction() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black text-[#030405] tracking-tight leading-tight">
-            Empowering the Next Generation of <span className="blue-gradient-text">Malabar Enterprise</span>
+            Empowering the Next Generation of <span className="blue-gradient-text">Malappuram Enterprise</span>
           </h2>
 
           <p className="text-lg sm:text-xl text-[#475569] leading-relaxed pt-2 font-medium">
@@ -39,7 +39,7 @@ export function EventIntroduction() {
             </div>
             <h3 className="text-base font-bold text-[#030405]">High-Value Networking</h3>
             <p className="text-xs text-[#64748B] leading-relaxed">
-              Connect with 500+ peers, prospective co-founders, and commercial partners.
+              Connect with 200+ peers, prospective co-founders, and commercial partners.
             </p>
           </div>
 

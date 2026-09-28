@@ -177,7 +177,7 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
                 onClick={onRegisterClick}
                 className="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 rounded-2xl font-black text-sm sm:text-base text-[#030405] bg-[#FBC206] hover:bg-[#e5b004] shadow-[0_8px_25px_rgba(251,194,6,0.4)] hover:shadow-[0_12px_30px_rgba(251,194,6,0.5)] transform active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-3 group"
               >
-                <span>Register Now For Free</span>
+                <span>Register Now</span>
                 <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-[#030405] text-[#FBC206] flex items-center justify-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="w-3.5 sm:w-4 h-3.5 sm:h-4 font-bold" />
                 </div>
@@ -202,7 +202,7 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
                   <span>One-Day Summit 2026</span>
                 </span>
                 <span className="text-[11px] sm:text-xs font-bold text-[#035AFC] bg-[#EBF2FF] px-2.5 py-1 rounded-lg">
-                  Free Delegate Pass
+                 Delegate Pass
                 </span>
               </div>
 
@@ -219,11 +219,11 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
 
                 <div className="grid grid-cols-2 gap-2.5 sm:gap-3 pt-3 sm:pt-4 border-t border-white/20">
                   <div className="bg-white/10 backdrop-blur-sm p-2 sm:p-2.5 rounded-xl text-center">
-                    <div className="text-lg sm:text-xl font-black font-mono text-[#FBC206]">500+</div>
+                    <div className="text-lg sm:text-xl font-black font-mono text-[#FBC206]">200+</div>
                     <div className="text-[9px] sm:text-[10px] text-slate-200 uppercase font-semibold">Attendees</div>
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm p-2 sm:p-2.5 rounded-xl text-center">
-                    <div className="text-lg sm:text-xl font-black font-mono text-white">12+</div>
+                    <div className="text-lg sm:text-xl font-black font-mono text-white">16+</div>
                     <div className="text-[9px] sm:text-[10px] text-slate-200 uppercase font-semibold">MYBF Chapters</div>
                   </div>
                 </div>

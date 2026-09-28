@@ -9,7 +9,7 @@ export function EventHighlights() {
   const highlights = [
     {
       title: 'Entrepreneur Networking',
-      subtitle: '500+ Regional Founders',
+      subtitle: '200+ Regional Founders',
       description:
         'Engage with ambitious startup creators, experienced business owners, and dynamic peers from all 12 MYBF chapters across Malappuram district.',
       icon: Users2,
