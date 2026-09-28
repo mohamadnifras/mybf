@@ -73,11 +73,11 @@ export function VenueSection() {
             </a>
 
             <a
-              href="tel:+919847000000"
+              href="tel:+917994644539"
               className="px-5 py-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider text-[#030405] bg-[#F8FAFC] hover:bg-[#EBF2FF] border border-[#E2E8F0] active:scale-98 transition-all flex items-center justify-center gap-2"
             >
               <Phone className="w-4 h-4 text-[#035AFC]" />
-              <span>Call Venue Desk (+91 98470 00000)</span>
+              <span>Call Venue Desk (+91 7994644539)</span>
             </a>
           </div>
         </div>

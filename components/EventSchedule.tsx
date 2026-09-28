@@ -31,7 +31,7 @@ export function EventSchedule() {
       period: 'Afternoon Session',
       title: 'Networking Lunch & B2B Matchmaking',
       description:
-        'Authentic Malabar buffet lunch with structured 1-on-1 networking circles and introductory founder exchanges.',
+        'Authentic Malappuram buffet lunch with structured 1-on-1 networking circles and introductory founder exchanges.',
       icon: Users,
       tag: 'Networking',
     },
@@ -135,21 +135,21 @@ export function EventSchedule() {
         </div>
 
         {/* Day 1 & Day 2 Selector Tabs */}
-        <div className="mt-8 flex justify-center">
-          <div className="p-1.5 rounded-2xl bg-[#F1F5F9] border border-[#E2E8F0] inline-flex items-center gap-2">
+        <div className="mt-8 flex justify-center px-2">
+          <div className="p-1 sm:p-1.5 rounded-2xl bg-[#F1F5F9] border border-[#E2E8F0] grid grid-cols-2 gap-1.5 sm:gap-2 w-full max-w-sm sm:max-w-md">
             <button
               onClick={() => {
                 setActiveDay('day1');
                 setSelectedSlot(0);
               }}
-              className={`px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
+              className={`py-2.5 px-3 sm:px-5 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeDay === 'day1'
                   ? 'bg-[#035AFC] text-white shadow-md'
                   : 'text-[#64748B] hover:text-[#030405]'
               }`}
             >
-              <Sun className="w-4 h-4" />
-              <span>Day 1 • Wed, 7 Oct</span>
+              <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="truncate">Day 1 • Wed, 7 Oct</span>
             </button>
 
             <button
@@ -157,14 +157,14 @@ export function EventSchedule() {
                 setActiveDay('day2');
                 setSelectedSlot(0);
               }}
-              className={`px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
+              className={`py-2.5 px-3 sm:px-5 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeDay === 'day2'
                   ? 'bg-[#035AFC] text-white shadow-md'
                   : 'text-[#64748B] hover:text-[#030405]'
               }`}
             >
-              <Moon className="w-4 h-4" />
-              <span>Day 2 • Thu, 8 Oct</span>
+              <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="truncate">Day 2 • Thu, 8 Oct</span>
             </button>
           </div>
         </div>
@@ -177,49 +177,49 @@ export function EventSchedule() {
               <div
                 key={idx}
                 onClick={() => setSelectedSlot(idx)}
-                className={`p-5 sm:p-6 rounded-2xl sm:rounded-3xl border transition-all cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6 shadow-sm group ${
+                className={`p-4 sm:p-6 rounded-2xl sm:rounded-3xl border transition-all cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-3.5 sm:gap-6 shadow-sm group ${
                   isSelected
-                    ? 'bg-white border-2 border-[#035AFC] ring-4 ring-[#035AFC]/10 shadow-md -translate-y-0.5'
+                    ? 'bg-white border-2 border-[#035AFC] ring-4 ring-[#035AFC]/10 shadow-md sm:-translate-y-0.5'
                     : 'bg-white border-[#E2E8F0] hover:border-[#035AFC]/50'
                 }`}
               >
-                <div className="flex items-start gap-3.5 sm:gap-4">
+                <div className="flex items-start gap-3 sm:gap-4 flex-1">
                   <div
-                    className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center shrink-0 mt-0.5 transition-transform group-hover:scale-105 shadow-xs ${
+                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0 mt-0.5 transition-transform group-hover:scale-105 shadow-xs ${
                       isSelected
                         ? 'bg-[#035AFC] text-white'
                         : 'bg-[#EBF2FF] text-[#035AFC]'
                     }`}
                   >
-                    <item.icon className="w-5 sm:w-6 h-5 sm:h-6" />
+                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
 
-                  <div className="space-y-1">
-                    <div className="flex flex-wrap items-center gap-2">
+                  <div className="space-y-1 flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                       <span className="text-[10px] sm:text-[11px] font-bold uppercase px-2 py-0.5 rounded bg-[#F8FAFC] border border-[#E2E8F0] text-[#035AFC]">
                         {item.tag}
                       </span>
                       <span className="text-xs font-mono font-bold text-[#64748B] flex items-center gap-1">
-                        <Clock className="w-3 h-3 text-[#B28400]" />
+                        <Clock className="w-3 h-3 text-[#B28400] shrink-0" />
                         <span>{item.time}</span>
                       </span>
                     </div>
 
-                    <h3 className="text-base sm:text-lg font-black text-[#030405] group-hover:text-[#035AFC] transition-colors">
+                    <h3 className="text-sm sm:text-lg font-black text-[#030405] group-hover:text-[#035AFC] transition-colors leading-snug">
                       {item.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#475569] leading-relaxed max-w-2xl">
+                    <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
                       {item.description}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex md:flex items-center justify-between md:justify-end border-t md:border-t-0 pt-2.5 md:pt-0 border-[#F1F5F9] text-xs text-[#035AFC] font-bold shrink-0">
+                <div className="flex items-center justify-between md:justify-end border-t md:border-t-0 pt-2.5 md:pt-0 border-[#F1F5F9] text-xs text-[#035AFC] font-bold shrink-0">
                   <span className="text-[11px] text-[#64748B] font-semibold md:hidden">
                     {item.period}
                   </span>
-                  <div className="flex items-center gap-1">
+                  <div className="hidden md:flex items-center gap-1">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#035AFC]"></span>
                   </div>
                 </div>

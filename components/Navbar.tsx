@@ -37,7 +37,7 @@ export function Navbar({ onRegisterClick }: NavbarProps) {
         </Link>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-7 text-sm font-bold text-white/85">
+        <nav className="hidden md:flex items-center gap-6 text-sm font-bold text-white/85">
           <button
             onClick={() => scrollTo('about')}
             className="hover:text-[#FBC206] transition-colors cursor-pointer"
@@ -49,6 +49,12 @@ export function Navbar({ onRegisterClick }: NavbarProps) {
             className="hover:text-[#FBC206] transition-colors cursor-pointer"
           >
             Highlights
+          </button>
+          <button
+            onClick={() => scrollTo('women-empowerment')}
+            className="hover:text-[#FBC206] transition-colors cursor-pointer flex items-center gap-1 text-[#FBC206]"
+          >
+            <span>Women in Business</span>
           </button>
           <button
             onClick={() => scrollTo('schedule')}
@@ -111,6 +117,13 @@ export function Navbar({ onRegisterClick }: NavbarProps) {
               className="p-3 rounded-xl bg-white/5 border border-white/10 text-left hover:bg-white/15 hover:text-[#FBC206] transition-all"
             >
               Key Highlights
+            </button>
+            <button
+              onClick={() => scrollTo('women-empowerment')}
+              className="p-3 rounded-xl bg-[#E60067]/20 border border-[#E60067]/40 text-[#FBC206] text-left hover:bg-[#E60067]/30 transition-all col-span-2 flex items-center justify-between"
+            >
+              <span>Women in Business Track</span>
+              <span className="text-[10px] bg-[#E60067] text-white px-2 py-0.5 rounded-full font-bold">Featured</span>
             </button>
             <button
               onClick={() => scrollTo('schedule')}

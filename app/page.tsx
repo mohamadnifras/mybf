@@ -5,6 +5,7 @@ import { Navbar } from '@/components/Navbar';
 import { HeroSection } from '@/components/HeroSection';
 import { EventIntroduction } from '@/components/EventIntroduction';
 import { EventHighlights } from '@/components/EventHighlights';
+import { WomenEmpowermentSection } from '@/components/WomenEmpowermentSection';
 import { EventSchedule } from '@/components/EventSchedule';
 import { RegistrationForm } from '@/components/RegistrationForm';
 import { VenueSection } from '@/components/VenueSection';
@@ -29,6 +30,7 @@ export default function LandingPage() {
         <HeroSection onRegisterClick={scrollToForm} />
         <EventIntroduction />
         <EventHighlights />
+        <WomenEmpowermentSection onRegisterClick={scrollToForm} />
         <EventSchedule />
         <RegistrationForm />
         <VenueSection />

@@ -364,7 +364,7 @@ export function RegistrationForm() {
                   </>
                 ) : (
                   <>
-                    <span>Complete Free Registration</span>
+                    <span>Registration</span>
                     <ArrowRight className="w-5 h-5" />
                   </>
                 )}

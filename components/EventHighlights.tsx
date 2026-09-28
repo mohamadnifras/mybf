@@ -69,29 +69,29 @@ export function EventHighlights() {
         </div>
 
         {/* 4 Cards Grid - Responsive & Mobile Interactive */}
-        <div className="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch">
           {highlights.map((item, idx) => {
             const isSelected = activeCard === idx;
             return (
               <div
                 key={idx}
                 onClick={() => setActiveCard(idx)}
-                className={`p-6 sm:p-7 rounded-3xl transition-all cursor-pointer flex flex-col justify-between group shadow-lg ${
+                className={`p-5 sm:p-6 lg:p-6 rounded-3xl transition-all cursor-pointer flex flex-col justify-between h-full group shadow-md hover:shadow-xl ${
                   isSelected
-                    ? 'bg-white border-2 border-[#FBC206] shadow-2xl ring-4 ring-[#FBC206]/20 -translate-y-1'
-                    : 'bg-white/95 backdrop-blur-md border border-white/40 hover:border-[#035AFC]/60'
+                    ? 'bg-white border-2 border-[#FBC206] shadow-xl ring-4 ring-[#FBC206]/20 sm:-translate-y-1'
+                    : 'bg-white/95 backdrop-blur-md border border-white/50 hover:border-[#035AFC]/40'
                 }`}
               >
-                <div className="space-y-4">
+                <div className="space-y-3.5 flex-1 pb-4">
                   <div className="flex items-center justify-between">
                     <div
-                      className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-transform group-hover:scale-105 shadow-xs ${
+                      className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center transition-transform group-hover:scale-105 shadow-xs ${
                         item.color === 'blue'
                           ? 'bg-[#EBF2FF] text-[#035AFC]'
                           : 'bg-[#FFF9E6] text-[#B28400]'
                       }`}
                     >
-                      <item.icon className="w-6 h-6" />
+                      <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
 
                     <span
@@ -106,20 +106,18 @@ export function EventHighlights() {
                   </div>
 
                   <div className="space-y-1">
-                    <h3 className="text-base sm:text-lg font-black text-[#030405] group-hover:text-[#035AFC] transition-colors">
+                    <h3 className="text-base sm:text-lg font-black text-[#030405] group-hover:text-[#035AFC] transition-colors leading-snug">
                       {item.title}
                     </h3>
                     <div className="text-xs font-bold text-[#035AFC]">{item.subtitle}</div>
                   </div>
 
-                  <p className="text-xs text-[#64748B] leading-relaxed">{item.description}</p>
+                  <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">{item.description}</p>
                 </div>
 
-                <div className="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-[#F1F5F9] flex items-center justify-between text-xs font-bold text-[#035AFC]">
-                  <div className="flex items-center gap-1.5 text-[11px] text-[#475569]">
-                    <CheckCircle className="w-3.5 h-3.5 text-[#035AFC]" />
-                    <span className="truncate">{item.takeaway}</span>
-                  </div>
+                <div className="pt-3.5 mt-auto border-t border-slate-100 flex items-start gap-2 text-[#475569]">
+                  <CheckCircle className="w-4 h-4 text-[#035AFC] shrink-0 mt-0.5" />
+                  <span className="text-xs leading-snug font-medium text-[#475569]">{item.takeaway}</span>
                 </div>
               </div>
             );

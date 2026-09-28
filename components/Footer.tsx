@@ -51,15 +51,19 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs text-slate-300/90">
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#FBC206] shrink-0" />
-                <span>+91 98470 00000 / +91 94470 12345</span>
+                <a href="tel:+917994644539" className="hover:text-white transition-colors">
+                  +91 7994644539
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#FBC206] shrink-0" />
-                <span>events@mybf.org</span>
+                <a href="mailto:events@mybf.org" className="hover:text-white transition-colors">
+                  events@mybf.org
+                </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#FBC206] shrink-0 mt-0.5" />
-                <span>MYBF Headquarters, Manjeri, Malappuram, Kerala</span>
+                <span>MYBF Headquarters, Mission Malappuram 2050, Malappuram, Kerala</span>
               </li>
             </ul>
           </div>

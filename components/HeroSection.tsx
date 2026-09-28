@@ -144,7 +144,7 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
                 </div>
                 <div>
                   <div className="text-[10px] sm:text-[11px] text-[#64748B] font-bold uppercase">Date</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#030405]">Wed 7 Oct – Thu 8 Oct, 2026</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#030405] leading-snug">Wed 7 Oct – Thu 8 Oct, 2026</div>
                 </div>
               </div>
 
@@ -154,7 +154,7 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
                 </div>
                 <div>
                   <div className="text-[10px] sm:text-[11px] text-[#64748B] font-bold uppercase">Time</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#030405]">09:00 AM (Wed) – 10:00 PM (Thu)</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#030405] leading-snug">09:00 AM (Wed) – 10:00 PM (Thu)</div>
                 </div>
               </div>
 
@@ -162,9 +162,9 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
                 <div className="w-9 sm:w-10 h-9 sm:h-10 rounded-xl bg-[#EBF2FF] flex items-center justify-center shrink-0">
                   <MapPin className="w-4 sm:w-5 h-4 sm:h-5 text-[#035AFC]" />
                 </div>
-                <div className="truncate">
+                <div className="min-w-0">
                   <div className="text-[10px] sm:text-[11px] text-[#64748B] font-bold uppercase">Venue</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#030405] truncate">
+                  <div className="text-xs sm:text-sm font-bold text-[#030405] leading-snug">
                     Kakkadampoyil, Kerala
                   </div>
                 </div>
