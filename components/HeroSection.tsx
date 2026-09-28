@@ -58,15 +58,49 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
               </span>
             </div>
 
-            {/* Event Title */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] drop-shadow-sm">
-              MYBF <span className="text-[#FBC206]">Entrepreneurship</span> Conclave 2026
-            </h1>
+            {/* Flagship Theme Typography - "WHY NOT Malappuram" matching the brand visual */}
+            <div className="flex flex-col items-center lg:items-start select-none pt-1">
+              {/* WHY */}
+              <div className="text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9] drop-shadow-md">
+                WHY
+              </div>
 
-            {/* Subtitle */}
-            <p className="text-base sm:text-xl font-medium text-blue-100 leading-relaxed max-w-2xl mx-auto lg:mx-0 drop-shadow-xs">
-              Connecting Young Entrepreneurs, Innovators and Future Leaders for an empowering one-day summit in Malappuram.
-            </p>
+              {/* NOT with Yellow O-dot and Yellow T-triangle */}
+              <div className="relative flex items-center text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9] mt-0.5 sm:mt-1 drop-shadow-md">
+                <span>N</span>
+                <span className="relative inline-flex items-center justify-center mx-[1px]">
+                  <span>O</span>
+                  <span className="absolute w-[38%] h-[38%] rounded-full bg-[#FBC206]"></span>
+                </span>
+                <span className="relative inline-flex items-center">
+                  <span>T</span>
+                  {/* Dynamic Yellow Triangle Accent */}
+                  <span
+                    className="absolute -right-5 sm:-right-8 top-1/2 -translate-y-[20%] w-0 h-0 border-t-[10px] sm:border-t-[16px] border-t-transparent border-b-[10px] sm:border-b-[16px] border-b-transparent border-l-[16px] sm:border-l-[24px] border-l-[#FBC206] transform -rotate-12 drop-shadow-xs"
+                  />
+                </span>
+              </div>
+
+              {/* Tilted Magenta Badge: "Malappuram" with Cyan bottom stripe */}
+              <div className="mt-2.5 sm:mt-3 transform -rotate-3 hover:-rotate-1 transition-transform origin-left">
+                <div className="relative inline-flex items-center px-4 sm:px-6 py-1 sm:py-2 rounded-md bg-[#E60067] shadow-xl border-b-[3.5px] sm:border-b-[4.5px] border-[#00D2FF]">
+                  <span className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-wide font-sans">
+                    Malappuram
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Event Title & Subtitle */}
+            <div className="space-y-2 pt-2">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight drop-shadow-sm">
+                MYBF <span className="text-[#FBC206]">Entrepreneurship</span> Conclave 2026
+              </h1>
+
+              <p className="text-sm sm:text-lg font-medium text-blue-100 leading-relaxed max-w-2xl mx-auto lg:mx-0 drop-shadow-xs">
+                Connecting Young Entrepreneurs, Innovators and Future Leaders for an empowering one-day summit in Malappuram.
+              </p>
+            </div>
 
             {/* Interactive Mobile Countdown Pill Grid */}
             <div className="p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/40 shadow-xl max-w-xl mx-auto lg:mx-0">
