@@ -15,9 +15,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'MYBF Entrepreneurship Conclave 2026 | Malappuram Youth Business Forum',
+  title: 'MYBF Entrepreneurship Conclave 2026 | Kakkadampoyil, Kerala',
   description:
-    'Connecting Young Entrepreneurs, Innovators and Future Leaders. Register now for the flagship one-day summit in Manjeri, Malappuram.',
+    'Connecting Young Entrepreneurs, Innovators and Future Leaders. Register now for the flagship 2-day conclave in Kakkadampoyil, Kerala.',
   icons: {
     icon: '/logo.png',
   },

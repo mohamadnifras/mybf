@@ -41,7 +41,7 @@ export function SuccessModal({ isOpen, onClose, data }: SuccessModalProps) {
   if (!isOpen || !data) return null;
 
   const handleWhatsAppShare = () => {
-    const text = `🎉 I'm registered for *MYBF Entrepreneurship Conclave 2026*!\n\n📍 Venue: Grand Malabar Convention Centre, Manjeri\n🗓️ Date: Sunday, Nov 15, 2026\n🎫 Registration ID: *${data.registrationId}*\n\nDelegate Name: ${data.fullName}\nSee you there! Register now at: ${window.location.origin}`;
+    const text = `🎉 I'm registered for *MYBF Entrepreneurship Conclave 2026*!\n\n📍 Venue: Kakkadampoyil, Kerala\n🗓️ Date: Wed 7 Oct – Thu 8 Oct, 2026 (09:00 AM - 10:00 PM)\n🎫 Registration ID: *${data.registrationId}*\n\nDelegate Name: ${data.fullName}\nSee you there! Register now at: ${window.location.origin}`;
     window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
   };
 
@@ -120,12 +120,12 @@ export function SuccessModal({ isOpen, onClose, data }: SuccessModalProps) {
           <div className="flex items-start gap-2">
             <Calendar className="w-4 h-4 text-[#035AFC] shrink-0 mt-0.5" />
             <div>
-              <span className="font-bold">Sunday, Nov 15, 2026</span> • 09:00 AM - 05:00 PM
+              <span className="font-bold">Wed 7 Oct – Thu 8 Oct, 2026</span> • 09:00 AM - 10:00 PM
             </div>
           </div>
           <div className="flex items-start gap-2">
             <MapPin className="w-4 h-4 text-[#035AFC] shrink-0 mt-0.5" />
-            <div>Grand Malabar Convention Centre, Manjeri, Malappuram</div>
+            <div>Kakkadampoyil, Kerala</div>
           </div>
         </div>
 

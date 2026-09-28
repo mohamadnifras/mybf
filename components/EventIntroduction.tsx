@@ -17,7 +17,7 @@ export function EventIntroduction() {
           </h2>
 
           <p className="text-lg sm:text-xl text-[#475569] leading-relaxed pt-2 font-medium">
-            "MYBF brings together aspiring entrepreneurs, business leaders and young innovators for a one-day knowledge sharing and networking experience."
+            "MYBF brings together aspiring entrepreneurs, business leaders and young innovators for an empowering 2-day knowledge sharing and networking experience in Kakkadampoyil, Kerala."
           </p>
         </div>
 

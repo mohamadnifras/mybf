@@ -1,58 +1,118 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CalendarClock, Coffee, Mic2, Users, Award, BookOpen, Clock, ChevronRight } from 'lucide-react';
+import { CalendarClock, Coffee, Mic2, Users, Award, BookOpen, Clock, Sparkles, Moon, Sun, Flame } from 'lucide-react';
 
 export function EventSchedule() {
+  const [activeDay, setActiveDay] = useState<'day1' | 'day2'>('day1');
   const [selectedSlot, setSelectedSlot] = useState<number | null>(0);
 
-  const schedule = [
+  const day1Schedule = [
     {
-      time: '08:30 AM - 09:30 AM',
-      period: 'Morning Track',
-      title: 'Registration & Welcome Kit',
+      time: '09:00 AM - 10:30 AM',
+      period: 'Morning Session',
+      title: 'Registration & Welcome Refreshments',
       description:
-        'Delegate verification, attendee pass allocation, and morning welcome refreshments with fellow participants.',
+        'Delegate check-in, pass verification, welcome kit distribution, and morning tea & coffee in the misty hills of Kakkadampoyil.',
       icon: Coffee,
       tag: 'Check-In',
     },
     {
-      time: '09:30 AM - 11:00 AM',
-      period: 'Morning Track',
-      title: 'Inauguration & MYBF Vision 2026',
+      time: '10:30 AM - 01:00 PM',
+      period: 'Morning Session',
+      title: 'Grand Inauguration & MYBF Vision 2026',
       description:
-        'Official opening ceremony with business leaders, keynote address by MYBF president, and unveiling of youth initiatives.',
+        'Official opening address by distinguished entrepreneurs, state trade leaders, and key visionaries of the Malappuram Youth Business Forum.',
       icon: Mic2,
       tag: 'Inauguration',
     },
     {
-      time: '11:00 AM - 01:30 PM',
-      period: 'Mid-Day Track',
-      title: 'Expert Sessions & Growth Masterclass',
+      time: '01:00 PM - 02:30 PM',
+      period: 'Afternoon Session',
+      title: 'Networking Lunch & B2B Matchmaking',
       description:
-        'Practical sessions on scaling regional businesses, emerging digital tools, funding opportunities, and market expansion.',
-      icon: BookOpen,
-      tag: 'Masterclass',
-    },
-    {
-      time: '01:30 PM - 03:30 PM',
-      period: 'Afternoon Track',
-      title: 'Networking Session & Malabar Banquet Lunch',
-      description:
-        'Structured B2B matchmaking, 1-on-1 advisor consultations, chapter breakout circles, and traditional networking lunch.',
+        'Authentic Malabar buffet lunch with structured 1-on-1 networking circles and introductory founder exchanges.',
       icon: Users,
       tag: 'Networking',
     },
     {
-      time: '03:30 PM - 05:00 PM',
-      period: 'Valedictory Track',
-      title: 'Closing Ceremony & Delegate Honors',
+      time: '02:30 PM - 05:30 PM',
+      period: 'Afternoon Session',
+      title: 'Enterprise Growth Masterclass & Founder Insights',
       description:
-        'Honoring young entrepreneur achievers, delegate open floor feedback, certificate distribution, and closing remarks.',
-      icon: Award,
-      tag: 'Finale',
+        'Deep-dive interactive workshops on business scaling, financial management, brand positioning, and supply chain automation.',
+      icon: BookOpen,
+      tag: 'Masterclass',
+    },
+    {
+      time: '07:00 PM - 09:30 PM',
+      period: 'Evening Session',
+      title: 'Leadership Campfire & Executive Dinner',
+      description:
+        'Informal evening retreat session under the stars, fireside founder stories, and an exclusive executive dinner.',
+      icon: Flame,
+      tag: 'Evening Social',
     },
   ];
+
+  const day2Schedule = [
+    {
+      time: '09:00 AM - 11:30 AM',
+      period: 'Morning Session',
+      title: 'Global Trade & Enterprise Funding Session',
+      description:
+        'Panel discussion with active angel investors, venture capitalists, and export council advisors on securing growth capital.',
+      icon: Sparkles,
+      tag: 'Investment',
+    },
+    {
+      time: '11:30 AM - 01:30 PM',
+      period: 'Morning Session',
+      title: 'Startup Pitch Arena & Investor Connect',
+      description:
+        'Curated pitching session for high-potential regional startups in front of an esteemed panel of investors and mentors.',
+      icon: Mic2,
+      tag: 'Pitching',
+    },
+    {
+      time: '01:30 PM - 03:00 PM',
+      period: 'Afternoon Session',
+      title: 'Executive Networking Banquet Lunch',
+      description:
+        'High-value networking lunch connecting young founders with senior chapter leadership and trade partners.',
+      icon: Users,
+      tag: 'Banquet',
+    },
+    {
+      time: '03:00 PM - 05:30 PM',
+      period: 'Afternoon Session',
+      title: 'Chapter Roundtables & Strategic Alliances',
+      description:
+        'Collaborative syndicate sessions across MYBF regional chapters to build inter-district supply chains and alliances.',
+      icon: BookOpen,
+      tag: 'Syndicates',
+    },
+    {
+      time: '05:30 PM - 08:00 PM',
+      period: 'Evening Session',
+      title: 'Grand Valedictory Ceremony & MYBF Youth Awards',
+      description:
+        'Celebrating breakout regional entrepreneurs, conferring delegate honors, special recognitions, and summit closing addresses.',
+      icon: Award,
+      tag: 'Awards Ceremony',
+    },
+    {
+      time: '08:00 PM - 10:00 PM',
+      period: 'Night Session',
+      title: 'Gala Dinner & Conclave Wrap-up Celebration',
+      description:
+        'Festive gala banquet dinner, celebration of new partnerships, live music, and conclusion of the 2-day summit.',
+      icon: Moon,
+      tag: 'Grand Finale',
+    },
+  ];
+
+  const currentSchedule = activeDay === 'day1' ? day1Schedule : day2Schedule;
 
   return (
     <section id="schedule" className="py-16 sm:py-20 bg-white/90 backdrop-blur-xl border-y border-white/20 shadow-xl">
@@ -66,17 +126,52 @@ export function EventSchedule() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black text-[#030405] tracking-tight">
-            One-Day <span className="blue-gradient-text">Event Schedule</span>
+            2-Day <span className="blue-gradient-text">Event Schedule</span>
           </h2>
 
           <p className="text-sm sm:text-base text-[#475569] leading-relaxed max-w-2xl mx-auto">
-            A high-tempo single-day schedule structured for maximum learning, real connections, and inspiration.
+            A power-packed 2-day itinerary structured for visionary learning, leadership masterclasses, and transformative networking in Kakkadampoyil.
           </p>
         </div>
 
+        {/* Day 1 & Day 2 Selector Tabs */}
+        <div className="mt-8 flex justify-center">
+          <div className="p-1.5 rounded-2xl bg-[#F1F5F9] border border-[#E2E8F0] inline-flex items-center gap-2">
+            <button
+              onClick={() => {
+                setActiveDay('day1');
+                setSelectedSlot(0);
+              }}
+              className={`px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
+                activeDay === 'day1'
+                  ? 'bg-[#035AFC] text-white shadow-md'
+                  : 'text-[#64748B] hover:text-[#030405]'
+              }`}
+            >
+              <Sun className="w-4 h-4" />
+              <span>Day 1 • Wed, 7 Oct</span>
+            </button>
+
+            <button
+              onClick={() => {
+                setActiveDay('day2');
+                setSelectedSlot(0);
+              }}
+              className={`px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2 ${
+                activeDay === 'day2'
+                  ? 'bg-[#035AFC] text-white shadow-md'
+                  : 'text-[#64748B] hover:text-[#030405]'
+              }`}
+            >
+              <Moon className="w-4 h-4" />
+              <span>Day 2 • Thu, 8 Oct</span>
+            </button>
+          </div>
+        </div>
+
         {/* Timeline Items */}
-        <div className="mt-10 sm:mt-14 max-w-4xl mx-auto space-y-3.5 sm:space-y-4">
-          {schedule.map((item, idx) => {
+        <div className="mt-8 sm:mt-10 max-w-4xl mx-auto space-y-3.5 sm:space-y-4">
+          {currentSchedule.map((item, idx) => {
             const isSelected = selectedSlot === idx;
             return (
               <div

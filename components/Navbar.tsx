@@ -129,7 +129,7 @@ export function Navbar({ onRegisterClick }: NavbarProps) {
           <div className="p-3 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-between text-xs text-white">
             <div className="flex items-center gap-2 text-[#FBC206] font-bold">
               <Calendar className="w-4 h-4" />
-              <span>Sunday, Nov 15, 2026</span>
+              <span>Wed 7 Oct – Thu 8 Oct, 2026</span>
             </div>
             <span className="px-2 py-0.5 rounded bg-[#FBC206] text-[#030405] font-black text-[10px]">
               FREE PASS

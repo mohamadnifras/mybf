@@ -9,13 +9,13 @@ interface HeroSectionProps {
 
 export function HeroSection({ onRegisterClick }: HeroSectionProps) {
   const [timeLeft, setTimeLeft] = useState({
-    days: 48,
-    hours: 14,
-    minutes: 32,
-    seconds: 10,
+    days: 8,
+    hours: 15,
+    minutes: 30,
+    seconds: 0,
   });
 
-  const targetDate = new Date('2026-11-15T09:00:00.000Z').getTime();
+  const targetDate = new Date('2026-10-07T09:00:00+05:30').getTime();
 
   useEffect(() => {
     const updateCountdown = () => {
@@ -98,7 +98,7 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
               </h1>
 
               <p className="text-sm sm:text-lg font-medium text-blue-100 leading-relaxed max-w-2xl mx-auto lg:mx-0 drop-shadow-xs">
-                Connecting Young Entrepreneurs, Innovators and Future Leaders for an empowering one-day summit in Malappuram.
+                Connecting Young Entrepreneurs, Innovators and Future Leaders for an empowering 2-day summit in Kakkadampoyil, Kerala.
               </p>
             </div>
 
@@ -144,7 +144,7 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
                 </div>
                 <div>
                   <div className="text-[10px] sm:text-[11px] text-[#64748B] font-bold uppercase">Date</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#030405]">Sunday, Nov 15, 2026</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#030405]">Wed 7 Oct – Thu 8 Oct, 2026</div>
                 </div>
               </div>
 
@@ -154,7 +154,7 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
                 </div>
                 <div>
                   <div className="text-[10px] sm:text-[11px] text-[#64748B] font-bold uppercase">Time</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#030405]">09:00 AM - 05:00 PM</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#030405]">09:00 AM (Wed) – 10:00 PM (Thu)</div>
                 </div>
               </div>
 
@@ -165,7 +165,7 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
                 <div className="truncate">
                   <div className="text-[10px] sm:text-[11px] text-[#64748B] font-bold uppercase">Venue</div>
                   <div className="text-xs sm:text-sm font-bold text-[#030405] truncate">
-                    Grand Malabar Convention Centre, Manjeri
+                    Kakkadampoyil, Kerala
                   </div>
                 </div>
               </div>
@@ -199,7 +199,7 @@ export function HeroSection({ onRegisterClick }: HeroSectionProps) {
               <div className="flex items-center justify-between">
                 <span className="px-3 py-1 rounded-full text-[11px] sm:text-xs font-extrabold uppercase bg-[#FFF9E6] text-[#B28400] border border-[#FDE882] flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-[#FBC206]" />
-                  <span>One-Day Summit 2026</span>
+                  <span>2-Day Summit 2026</span>
                 </span>
                 <span className="text-[11px] sm:text-xs font-bold text-[#035AFC] bg-[#EBF2FF] px-2.5 py-1 rounded-lg">
                  Delegate Pass
